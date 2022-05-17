@@ -1,0 +1,214 @@
+/*
+    Esse arquivo CSS é a raiz de importação para as outras subpáginas. 
+    Aqui será trabalhado um header responsivo (menu mobile) e o footer.
+
+    @Versão: 1.0.
+    @Data:   05/10/2020.
+    @Autores: João Pedro & Walker.
+*/
+
+/* -------------- Trabalhnado com o Cabeçalho -------------- */
+
+.logo {max-width: 150px;}
+
+.cabecalho
+{
+    background-color: #FCB80E;
+    margin-bottom: 40px;
+}
+
+body {
+	background-color: #EEE9E0;
+}
+
+.menu-item ul {display: flex;}
+
+.cabecalho a
+{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-right: 60px;
+}
+
+.itensMenu {margin-top: 50px;}
+
+.cabecalho a:hover {color: #017B56; text-decoration: none;}
+
+/* -------------- Trabalhando display dos botões de Login & Logout -------------- */
+.menu-icon {display: none;}
+
+#menuMobile {display: none;}
+
+#perfil {display: none;}
+
+#perfil-logout {display: none;}
+
+.login-area {
+    display: flex;
+	flex-wrap: nowrap;
+	color: black;
+	width: 50px;
+	height: inherit;
+	right: 50px;
+	padding: 10px;
+	position: absolute;
+}
+
+.login-area i { font-size: 1.7em;}
+
+#login-icon {margin-right: 10px;}
+
+#logout-icon {top: 100px;}
+
+/* -------------- Fim Trabalhando display dos botões de Login & Logout -------------- */
+
+/* -------------- Trabalhando responsividade do Header + Menu Mobile -------------- */
+
+@media screen and (min-width:1500px) {
+    .menu-item ul {margin-left: 160px;}
+}
+
+@media screen and (max-width: 1192px) {
+    .sobreNos {display: none;}
+}
+
+/* -------------- Menu Mobile -------------- */
+@media screen and (max-width: 991px) {
+    /* -------------- Tratando os Displays -------------- */
+    .cabecalho {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 99;
+    }
+
+    .ongs {
+		display: block;
+    }
+
+    .sobreNos {
+        display: block;
+    }
+
+    .menu-icon {
+		display: flex;
+		flex-wrap: nowrap;
+		color: #017B56;
+		width: 50px;
+		height: inherit;
+		top: 0px;
+		right: 30px;
+		padding: 20px;
+		position: absolute;
+		z-index: 999;
+	}
+    
+    /* Tratando os Displays */
+    .espaço {padding: 80px;}
+    
+    .menu-item ul {display: none;}
+
+    .menu-icon i {
+		font-size: 1.7em;
+    }
+    
+    #menuMobile:checked ~ label i:nth-child(2) {
+        display: flex;
+    }
+
+	#menuMobile:checked ~ label i:first-child {
+		display: none;
+	}
+
+	#menuMobile:not(checked) ~ label i:first-child {
+		display: flex;
+	}
+
+	#menuMobile:not(checked) ~ label i:nth-child(2) {
+		display: none;
+	}
+
+	#menuMobile:checked ~ ul {
+		height: 100%;
+    }
+  
+    /* -------------- Fim Tratando os Displays -------------- */
+
+	.menu-item ul{
+		display: block;
+		position: fixed;
+        flex-wrap: wrap;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 0%;
+		overflow: hidden;
+		background: rgba(0, 0, 0, 0.8);
+
+		-webkit-transition: height 1s;
+		-moz-transition: height 1s;
+		-o-transition: height 1s;
+		transition: height 1s;
+	}
+
+	.menu-item a {
+        color: #E2553F;
+        display: block;
+        text-align: center;
+    }
+
+    .itensMenu {margin-top: 120px;}
+
+    #login-icon {
+        display: flex;
+        margin-top: 50px;
+        color: #017B56;
+        z-index: 99;
+    }
+
+    #logout-icon {
+        display: flex;
+        margin-top: 50px;
+        color: #017B56;
+        z-index: 99;
+    }
+}
+
+@media screen and (max-width:767px)
+{
+	.menu-icon {
+        display: block;
+        color: #017B56;
+		top: -120px;
+		z-index: 99;
+	}
+
+	#login-icon {
+		margin-top: -70px;
+		z-index: 99;
+    }
+    
+    #logout-icon {
+        margin-top: -70px;
+        z-index: 99;
+    }
+
+	.ongs {
+		display: block;
+	}
+}
+
+/* -------------- Fim Menu Mobile -------------- */
+
+/* -------------- Fim Cabeçalho -------------- */
+
+/* -------------- Rodapé -------------- */
+.footer {background-color: #FCB80E;}
+
+.footer p {text-align: center; font-family: 'Courier New', Courier, monospace; padding: 10px; margin-top: 15px;}
+
+.rodape {margin-top: 20px;}
+/* -------------- Fim Rodapé -------------- */
+

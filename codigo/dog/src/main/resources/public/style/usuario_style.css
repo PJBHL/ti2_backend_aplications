@@ -1,0 +1,76 @@
+/*
+  Esse arquivo CSS é a raiz da página user.html contem a responsividade e ajuste dos dados do usuario.
+
+  @Version: 1.0
+  @Data:    20/11/2020
+  @Autor:   João Pedro Lobato de Pinho
+*/
+
+
+.subtit2 {text-align: center; font-family: 'Courier New', Courier, monospace; margin-bottom: 30px;}
+
+/* Tratando Cards e Resposividade dos Cards */
+.card-img-top {height: 250px; border-radius: 20px;}
+
+.card-title {font-weight: bold;}
+
+.card-text {text-align: justify;}
+
+.card-adocao {
+	margin-bottom: 20px;
+	border-radius: 20px;
+}
+
+.card-dica {
+	margin-bottom: 20px;
+    border-radius: 20px;
+    height: 450px;
+}
+
+#subtitDica {margin-bottom: 30px; margin-top: 30px;}
+
+#doados{
+    max-width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 33%);
+}
+
+#denuncias{
+    max-width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 33%);
+}
+
+#dicas{
+    max-width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 33%);
+}
+
+@media screen and (min-width:320px) and (max-width:991px){
+    #doados{
+        max-width: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    #denuncias{
+        max-width: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    #dicas{
+        max-width: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 100%);
+    }
+}
+
+/* Fim Tratando Cards e Resposividade dos Cards */

@@ -1,0 +1,119 @@
+/*
+    Esse arquivo CSS é a raiz da página infoequipe.html contem a responsividade e ajuste de imagens.
+
+    @Version: 1.0
+    @Data:    01/10/2020
+    @Autor:   João Pedro Lobato de Pinho
+*/
+
+.titulo {
+    font-family: cursive;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #E2553F;
+}
+
+.titulo2 {
+    font-family: cursive;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #E2553F;
+    margin-top: 35px;
+}
+
+#text_equipe {text-align: center; font-family: cursive; font-size: 20px; margin-bottom: 50px;} 
+
+.textoProjeto {font-family: cursive; font-size: 20px; text-align: justify;}
+
+.gitLink {font-size: 1.7em;}
+
+.nossoTime{ text-align: center; }
+
+.nossoTime .fotoTime{
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.nossoTime .fotoTime:before,
+
+.nossoTime .fotoTime:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 13px solid #e6e5e5;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.nossoTime .fotoTime:after{
+    border-color: #E2553F #e6e5e5 #e6e5e5 #E2553F;
+    z-index: 1;
+    transform: rotate(-10deg);
+    transition: all 0.5s ease 0s;
+}
+
+.nossoTime:hover .fotoTime:after{ transform: rotate(350deg); }
+
+.nossoTime img{
+    width: 100%;
+    height: auto;
+}
+
+.nossoTime .nome{
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+    padding-bottom: 10px;
+    margin: 15px 0 10px 0;
+    position: relative;
+}
+
+.nossoTime .nome:after{
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: #222;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.nossoTime .post{
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    color: #777;
+}
+
+.nossoTime .icon{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.nossoTime .icon li{ display: inline-block; }
+
+.nossoTime .icon li a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    font-size: 14px;
+    color: #999;
+    margin-right: 5px;
+    transition: all 0.3s ease-out 0s;
+}
+
+.nossoTime .icon li a:hover{
+    background: #37b0f1;
+    color: #fff;
+}
+@media only screen and (max-width: 990px){
+    .nossoTime{ margin-bottom: 30px; }
+}

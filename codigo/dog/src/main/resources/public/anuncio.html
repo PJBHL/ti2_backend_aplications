@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Equipe BlogDog">
+		<title>BlogDog</title>
+
+		<!--LINKs Arquivos CSS-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+				       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="stylesheet" href="http://52.167.125.62:4567/style/header_footer.css">
+		<link rel="stylesheet" href="http://52.167.125.62:4567/style/anuncio_style.css">
+
+		<script src="http://52.167.125.62:4567/js/registroAdocao.js"></script>
+		<!--FONT AWESOME-->
+		<script src="https://kit.fontawesome.com/df59faa4dd.js" crossorigin="anonymous"></script>
+
+	</head>
+
+	<body>
+
+		<!--Cabeçalho Utilizando BootStrap-->
+		<header class="cabecalho">
+			<div class="col-12 header-area">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-4 col-lg-2 " id="logo-area">
+						<img src="imgs/home/logo.png" class="logo">
+					</div>
+					<div class="col-12 col-sm-12 col-md-8 col-lg-10 header-area">
+						<div class="menu-item">
+							<nav class="nav-cabecalho">
+								<input type="checkbox" id="perfil">
+								<label for="perfil" class="login-area">
+									<i class="far fa-address-card" id="login-icon"></i>
+									<i class="fas fa-sign-out-alt" id="logout-icon"></i>
+								</label>
+								<input type="checkbox" id="menuMobile">
+								<label for="menuMobile" class="menu-icon">
+									<i class="fa fa-bars" id="barras"></i>
+									<i class="fa fa-times-circle" id="xbarras"></i>
+								</label>
+								<ul>
+									<div class="itensMenu">
+										<a href="index.html" class="menu-item paginaInicial">Página Inicial</a>
+										<a href="adocao.html" class="menu-item adocao">Adoção</a>
+										<a href="denuncia.html" class="menu-item denuncias">Denúncias</a>
+										<a href="dicas.html" class="menu-item dicas">Dicas</a>
+										<a href="ongs.html" class="menu-item ongs">ONGs</a>
+										<a href="infoequipe.html" class="menu-item sobreNos">Sobre Nós</a>
+									</div>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="espaço"></div>
+		<main class="container main">
+			<h1 id="titulo"> Cadastro para adoção</h1>
+			<div class="row">
+				<div class="col-12">
+					<form id="relatos" method="POST" action="" enctype="multipart/form-data">
+						<!--Form-->
+						<div class="pt2 col-12">
+							<label for="nomeAnimal">Nome do Animal:</label>
+							<input type="text" id="nomeAnimal" class="form-control" placeholder="Ex: Scooby" maxLength="20" required>
+							<div class="pt1 col-24">
+								<div class="sexo">
+									<label for="sexoAnimal">Sexo:</label> <br>
+									<select type="text" id="sexo" class="form-control col-6"  required>
+										<option value="" selected></option>
+										<option value="F">Feminino</option>
+										<option value="M">Masculino</option>
+									</select>
+								</div>
+								<div class="raca"> 
+									<label for="raca">Raça:</label>
+									<input type="text" id="raca" class="form-control" placeholder="Ex: Boxer" required>
+								</div>
+								<div class="especie">
+									<label for="especie">Espécie:</label>
+									<select type="text" id="especie" class="form-control col-6"  required>
+										<option value="-1" selected></option>
+										<option value="1">Cão</option>
+										<option value="2">Gato</option>
+										<option value="3">Outro</option>
+									</select>
+								</div>
+
+								<div class="porte">
+									<label for="porte">Porte:</label>
+									<select type="text" id="porte" class="form-control col-6" required>
+										<option  value="-1" selected></option>          
+										<option value="1">Pequeno</option>
+										<option value="2">Médio</option>
+										<option value="3">Grande</option>
+									</select>
+								</div>
+
+								<div class="pelagem">
+									<label for="pelagem">Pelagem:</label>
+									<select type="text" id="pelagem" class="form-control col-6" required>
+										<option  value="-1" selected></option>
+										<option value="1">Curta</option>
+										<option value="2">Longa</option>
+										<option value="3">Ondulado</option>   
+									</select>
+								</div>
+
+								<div class="temperamento">                    
+									<label for="temperamento">Temperamento:</label>
+									<select type="text" id="temperamento" class="form-control col-6">
+										<option value="-1" selected></option>
+										<option value="1">Calmo</option>
+										<option value="2">Bravo</option>
+										<option value="3">Agressivo</option>
+									</select>
+								</div>
+								<div class="idade">
+									<label for="idade">Idade:</label>
+									<input type="text" id="idade" class="form-control col-1" placeholder="Ex: 6" maxLength="2">
+								</div>
+								<div class="cep">
+									<label for="cep">Informe seu CEP:</label>
+									<input type="text" id="cep" class="form-control col-6" required>
+								</div>
+							</div>
+						</div>
+						<label for="imagens">Imagens:</label>
+						<input type="file" name="img" id="imagens" accept=".png"> <br> <br>
+						<label for="historico">Historico do Animal:</label>
+						<textarea class="form-control" id="historico" rows="3" required></textarea>
+						<!--Fim Form-->
+				</div>
+					</form>
+					<input class="btn btn-warning button" id="bt" type="submit" onclick="submitResgistro()"  value="Enviar">
+			</div>
+			</div>
+		</main>
+		<!--Rodapé-->
+		<footer class="footer">
+			<div class="container-fluid rodape">
+				<div class="row">
+
+					<div class="col-12 footer_area">
+						<p>BlogDog - Todos os direitos reservados - 2020</p>
+					</div>
+
+				</div>
+			</div>
+		</footer>
+
+		<!-- chatbot -->
+		<script>
+			window.watsonAssistantChatOptions = {
+				integrationID: "29320758-a767-4356-9731-ce10c8ee167c", // The ID of this integration.
+				region: "us-south", // The region your integration is hosted in.
+				serviceInstanceID: "15d50abd-e524-48b0-a591-0d3836be04a6", // The ID of your service instance.
+				onLoad: function(instance) { instance.render(); }
+			};
+setTimeout(function(){
+	const t=document.createElement('script');
+	t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+	document.head.appendChild(t);
+});
+		</script>
+
+		<!--Bootstrap JS-->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+			crossorigin="anonymous"></script>
+	</body>
+
+</html>

@@ -1,0 +1,81 @@
+/*
+Esse arquivo CSS refere-se a responsividade da página de anuncios (Formulário).
+
+@Versão: 2.0.
+@Data:   28/11/2020.
+@Autores: João Pedro e Walker Freitas.
+ */
+
+#titulo {
+	text-align: center;
+	margin-bottom: 20px;
+	font-family: 'Courier New', Courier, monospace;
+}
+.form-control{
+	display: inline;/*fazendo os inputs ficarem na frente do label*/
+}
+.pt1{ 
+	display: grid;
+	grid-template-columns: 50% 50%;	
+	grid-template-rows: auto;
+}
+#idade{
+	max-width: 30%;
+}
+.cep{
+	grid-area: 4 / span 1; /*posicionando os itens nos blocos do grid*/
+}
+
+#bt {font-family: 'Courier New', Courier, monospace;}
+.form-control {margin-bottom: 30px;}
+
+@media only screen and (max-width: 560px){
+	.pt1{
+		display: grid;
+		grid-template-columns: 50% 50%;	
+		grid-template-rows: auto;
+	}
+	.form-control{
+		display: inline;
+	}
+	.temperamento{
+		grid-area: 3;
+	}
+	.raca{
+		grid-area: 1 / span 2;
+	}
+	.idade{
+		grid-area: 4 / 2;
+	}
+	.cep{
+		grid-area: 5 / span 2;
+	}
+	#idade{
+		max-width: 40%;
+	}
+}
+
+@media only screen and (max-width: 360px){
+	.pt1{
+		display: grid;
+		grid-template-columns: 50% 50%;	
+		grid-template-rows: auto;
+	}
+	.form-control{
+		display: block;
+	}
+	.temperamento{
+		grid-area: 4;
+	}
+	.raca{
+		grid-area: 1 / span 2;
+	}
+	.idade{
+		grid-area: 4 / 2;
+	}
+	.cep{
+		grid-area: 5 / span 2;
+	}
+}
+
+

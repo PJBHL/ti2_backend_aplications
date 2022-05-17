@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Equipe BlogDog">
+    <title>BlogDog</title>
+
+    <!--LINKs Arquivos CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://52.167.125.62:4567/style/header_footer.css">
+    <link rel="stylesheet" href="http://52.167.125.62:4567/style/dicas_style.css">
+    <!--FONT AWESOME-->
+    <script src="http://52.167.125.62:4567/js/cadastroDica.js"></script>
+    <script src="http://52.167.125.62:4567/js/dicas.js"></script>
+
+
+    <script src="https://kit.fontawesome.com/df59faa4dd.js" crossorigin="anonymous"></script>
+    <script src="http://52.167.125.62:4567/js/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!--Cabeçalho Utilizando BootStrap-->
+    <header class="cabecalho">
+        <div class="col-12 header-area">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-2 " id="logo-area">
+                    <img src="imgs/home/logo.png" class="logo">
+                </div>
+                <div class="col-12 col-sm-12 col-md-8 col-lg-10 header-area">
+                    <div class="menu-item">
+                        <nav class="nav-cabecalho">
+                            <input type="checkbox" id="perfil">
+                            <label for="perfil" class="login-area">
+                                <i onclick="window.open('user.html','_self');" class="far fa-address-card" id="login-icon"></i>
+                                <i class="fas fa-sign-out-alt" onclick="localStorage.clear();window.open('login.html','_self');" id="logout-icon"></i> <!--limpa o local storage e manda para o login-->
+                            </label>
+                            <input type="checkbox" id="menuMobile">
+                            <label for="menuMobile" class="menu-icon">
+                                <i class="fa fa-bars" id="barras"></i>
+                                <i class="fa fa-times-circle" id="xbarras"></i>
+                            </label>
+                            <ul>
+                                <div class="itensMenu">
+                                    <a href="index.html" class="menu-item paginaInicial">Página Inicial</a>
+                                    <a href="adocao.html" class="menu-item adocao">Adoção</a>
+                                    <a href="denuncia.html" class="menu-item denuncias">Denúncias</a>
+                                    <a href="dicas.html" class="menu-item dicas">Dicas</a>
+                                    <a href="ongs.html" class="menu-item ongs">ONGs</a>
+                                    <a href="infoequipe.html" class="menu-item sobreNos">Sobre Nós</a>
+                                </div>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Fim Cabeçalho Utilizando BootStrap-->
+    <div class="espaço"></div>
+    <!--Main-->
+    <main class="container">
+        <h1 id="tituloh1">Mural de dicas</h1>
+        <!--Card Area-->
+        <div id="tela">
+            <!-- Cards Dicas -->
+        </div>
+        <!--Fim Card Area-->
+
+        <div class="col-12">
+            <h4 class="subtit">Tem alguma boa dica? Compartilhe conosco!</h4>
+            <!--Form Dica-->
+            <form id="form-dica" enctype="multipart/form-data">
+                <div class="nome form-group row">
+                    <div class="col-sm-4">
+                        <label for="tituloDica">Título da Dica</label>
+                        <input name="titulo" type="text" class="form-control" id="tituloDica"
+                            placeholder="Passear com o cachorro" required>
+                    </div>
+                </div>
+                <div class="conteudo form-group row">
+                    <div class="col-sm-8">
+                        <label for="descricaoDica">Conteúdo da Dica</label>
+                        <input name="conteudo" type="text" class="form-control" id="descricaoDica"
+                            placeholder="Passear com o seu cachorro..." required>
+                    </div>
+                </div>
+                <div class="conteudo form-group row">
+                    <div class="col-sm-8">
+                        <label for="tipoDica">Do que a dica se trata ?</label>
+                        <select type="text" id="tipoDica" class="form-control col-6">
+                            <option value="1">Passeio</option>>
+                            <option value="2">Comida</option>>
+                            <option value="3">Veterinário</option>>
+                            <option value="4">Outros</option>>
+                        </select>
+                    </div>
+                </div>
+                <div class="conteudo form-group row">
+                    <div class="col-sm-4">
+                        <label for="imagensDica">Tem alguma foto ? (Opcional)</label> <br>
+                        <input name="img" type="file" id="imagensDica" accept=".png"> <br> <br>
+                    </div>
+                </div>
+                <div class="form-group row" id="botoes">
+                    <div class="col-sm-12">
+                        <input onclick="cadastroDica()" type="button" class="btn btn-success" id="btnInsert"
+                            value="Enviar">
+                    </div>
+                </div>
+            </form>
+            <!--Fim Form Dica-->
+        </div>
+    </main>
+    <!--FIM Main-->
+    <!--Rodapé-->
+    <footer class="footer">
+        <div class="container-fluid rodape">
+            <div class="row">
+                <div class="col-12 footer_area">
+                    <p>BlogDog - Todos os direitos reservados - 2020</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Fim Rodapé-->
+
+    <!-- chatbot -->
+    <!--
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "29320758-a767-4356-9731-ce10c8ee167c", // The ID of this integration.
+            region: "us-south", // The region your integration is hosted in.
+            serviceInstanceID: "15d50abd-e524-48b0-a591-0d3836be04a6", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
+          };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+          document.head.appendChild(t);
+        });
+    </script>
+-->
+    <!--Bootstrap JS-->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!--Bootstrap JS-->
+</body>
+
+</html>

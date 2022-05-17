@@ -1,0 +1,50 @@
+/*
+    Esse arquivo CSS é a raiz da página home.html, contem a responsividade de alguns itens + adequação de fontes
+    e textos.
+
+    @Versão: 1.0.
+    @Data:   06/10/2020.
+    @Autores: João Pedro & Walker.
+*/
+
+/* Carousel */
+.banner h5, p {font-family: 'Courier New', Courier, monospace;}
+/* Fim Carousel */
+
+/* Texto Adoção */
+.text_adocao h3 {margin-top: 40px; font-size: 25px; font-family: 'Courier New', Courier, monospace; margin-left: 10px;}
+
+.text_adocao p {font-size: 18px; text-align: justify; font-family: 'Courier New', Courier, monospace; padding: 10px;}
+
+/* Fim Texto Adoção */
+
+/* Aside Adoção */
+.card_denuncia {margin-top: 40px;}
+
+.card-title {font-family: 'Courier New', Courier, monospace;}
+
+.card-text {font-family: 'Courier New', Courier, monospace;}
+/* Fim Aside Adoção */
+
+/* Adocao */
+.adoption {font-family: 'Courier New', Courier, monospace;}
+
+.adocao-cards h3 {margin-top: 40px; text-align: center; margin-bottom: 50px;}
+
+.adocao-cards h5 {text-align: center; margin-top: 30px; margin-bottom: 50px;}
+
+.img-adocao {max-width: 50%; display: block; margin-left: auto; margin-right: auto;}
+
+.botao-esquerda {background-color: #E2553F; border-radius: 20px;}
+
+.botao-direita {background-color: #E2553F; border-radius: 20px;}
+/* Fim Adocao */
+
+/* Media Query para Carousel Inicial */
+@media screen and (min-width:320px) and (max-width:991px){
+    .carousel {
+		margin-left: auto;
+		margin-bottom: 20px;
+	}
+}
+/* Fim Media Query para Carousel Inicial */

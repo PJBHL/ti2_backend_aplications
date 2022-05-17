@@ -1,0 +1,30 @@
+/*
+  Esse arquivo CSS é a raiz da página login.html contem a responsividade e ajuste do login.
+
+  @Version: 1.0
+  @Data:    01/10/2020
+  @Autor:   João Pedro Lobato de Pinho
+*/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+.login-box {
+  background-color: rgba(255, 218, 185, 0.5);
+  padding: 30px;
+  border-radius: 10px
+}
+
+body {
+  margin: 0px;
+}
+
+.text-login {
+  color:  #E2553F !important;
+}

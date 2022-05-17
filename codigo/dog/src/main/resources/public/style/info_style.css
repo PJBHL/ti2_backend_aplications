@@ -1,0 +1,17 @@
+/*
+    Esse arquivo CSS é a raiz para as subpáginas de info de adoção dos cães na pagina "Adoção" e "Página Inicial".
+
+    @Versão: 1.0.
+    @Data:   13/10/2020.
+    @Autores: João Pedro & Walker.
+*/
+
+/* Informação Sobre o Dog */
+#texto {font-family: 'Courier New', Courier, monospace; text-align: justify;}
+
+#imagem {border-radius: 10px;}
+
+/* Fim Informação Sobre o Dog */
+
+.titulo {text-align: center; margin-top: 35px; margin-bottom: 25px; font-family: 'Courier New', Courier, monospace;}
+

@@ -1,0 +1,40 @@
+/*
+    Esse arquivo CSS refere-se a página de ongs.
+    @Versão: 1.0.
+    @Data:   20/11/2020.
+    @Autores: João Pedro.
+*/
+
+/* Tratando Textos em Geral */
+
+.titulo {text-align: center; font-family: cursive; margin-bottom: 30px;}
+
+#paragrafo {text-align: justify; font-family: cursive; font-size: 17px; margin-bottom: 20px;}
+
+/* Fim Tratando Textos em Geral */
+
+/* Tratando Ongs do Banco */
+
+#JSarea {margin-top: 30px; margin-bottom: 30px;}
+
+.informacoesOng {font-family: 'Courier New', Courier, monospace; margin-bottom: 20px;}
+
+.nomeOng {text-align: center; margin-bottom: 20px;}
+
+/* Fim Tratando Ongs do Banco */
+
+/* Tratando Formulario para Contato */
+
+.formulario {margin-top: 45px;}
+
+#contato {text-align: justify; font-family: cursive; font-size: 17px; margin-bottom: 20px;}
+
+#email {
+    max-width: 300px;
+}
+
+#celular {
+    max-width: 300px;
+}
+
+/* Fim Tratando Formulario para Contato */

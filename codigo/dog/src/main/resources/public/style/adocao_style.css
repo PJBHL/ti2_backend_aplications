@@ -1,0 +1,49 @@
+/*
+    Esse arquivo CSS refere-se a responsividade da página de adoção (Catálago).
+    @Versão: 1.0.
+    @Data:   13/10/2020.
+    @Autores: João Pedro.
+*/
+
+/* Tratando Responsividade, tamanhos, fonte e texto */
+main h5, p {font-family: 'Courier New', Courier, monospace;}
+
+.text-sub {
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+}
+
+div #text{
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 18px;
+    text-align: justify;
+}
+/* Fim Tratando Responsividade, tamanhos, fonte e texto */
+
+/* Tratando Cards e Resposividade dos Cards */
+.card-img-top {height: 250px; border-radius: 20px;}
+
+.card-adocao {
+	margin-bottom: 20px;
+	border-radius: 20px;
+}
+
+#JSarea{
+    max-width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 33%);
+}
+
+.card-text {text-align: justify;}
+
+@media screen and (min-width:320px) and (max-width:991px){
+    #JSarea{
+        max-width: 100%;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 100%);
+    }
+}
+/* Fim Tratando Cards e Resposividade dos Cards */
